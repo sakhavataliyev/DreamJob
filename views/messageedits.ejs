@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2><%= title %></h2>
+  <form action="/update" method="post">
+    <input type="text" value="<%= form.id %>" name="id">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter Name" value="<%= form.sname %>" name="sname" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter SurName" value="<%= form.surname %>" name="surname" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter Phone" value="<%= form.phone %>" name="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter Email" value="<%= form.email %>" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter City" value="<%= form.city %>" name="city" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter Age" value="<%= form.age %>" name="age" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter nodejs" value="<%= form.nodejs %>" name="nodejs" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter mysqls" value="<%= form.mysqls %>" name="mysqls" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter Bootstrap" value="<%= form.bootstrap %>" name="bootstrap" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter education" value="<%= form.education %>" name="education" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter experience" value="<%= form.experience %>" name="experience" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter salary" value="<%= form.salary %>" name="salary" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter more" value="<%= form.morei %>" name="morei" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter regtime" value="<%= form.regtime %>" name="regtime" required>
+    </div>
+    <div class="form-group">
+      <label for="inputnodeState"><i class="fa fa-header" aria-hidden="false"></i></label>
+      <select id="inputnodeState" class="form-control" name="durum" value="<%= form.durum %>">
+        <option selected>Beklemede </option>
+        <option>Kabul Edildi!</option>
+        <option>Kabul edilmedi!</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>

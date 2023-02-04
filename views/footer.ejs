@@ -1,0 +1,54 @@
+<footer class="pt-4 my-md-5 pt-md-5" style="margin-bottom: 1rem!important;">
+    <div class="text-muted text-center text-small pt-md-5" style="margin-right: -30px;  margin-left: -30px;">
+            <p class="mb-1">© Copyright Sakhavat Aliyev Inc. 2021</p>
+          </div>
+
+  </footer>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+<script>
+
+<!--Modal start-->
+
+$('.modal').click(function(event){
+$(event.target).modal('hide');
+});
+<!--Modal end-->
+
+<!--navbar hide start-->
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+if (prevScrollpos > currentScrollPos) {
+document.getElementById("navbar_tt").style.top = "0";
+} else {
+document.getElementById("navbar_tt").style.top = "-66px";
+}
+prevScrollpos = currentScrollPos;
+}
+<!--navbar hide end-->
+
+<!--search start-->
+function openSearch() {
+document.getElementById("searchOverlayft").style.display = "block";
+}
+
+function closeSearch() {
+document.getElementById("searchOverlayft").style.display = "none";
+}
+<!--search end-->
+</script>
+
+
+</body>
+</html>

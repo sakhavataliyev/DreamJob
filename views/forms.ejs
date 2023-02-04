@@ -1,0 +1,20 @@
+<%- include('head'); %>
+
+
+<hr>
+<footer class="container text-center">
+      <p>© All rights are reserved by Sakhavat Aliyev</p>
+
+      <% see.forEach(function (forms) { %>
+        <tr>  
+            <td><%= forms.sname %></td>  <br><hr>
+            <td><%= forms.email %></td>
+        </tr>                                   
+     <% }) %>
+
+    </footer>
+
+
+
+</body>
+</html>

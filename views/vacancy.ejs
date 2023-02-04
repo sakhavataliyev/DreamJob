@@ -1,0 +1,117 @@
+<%- include('head'); %>
+
+<style>
+    body  {
+ background-image: url("https://preview.colorlib.com/theme/jobhub/assets/img/hero/h1_hero.png");
+    }
+</style>
+<!--news start-->
+
+<div class="container">
+<div class="row justify-content">
+  <div class="col-xl-4 col-lg-3">
+  <div class="findjob">
+  <h1>Find your dream job.</h1>
+  <p>Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
+  </div>
+  </div>
+  <div class="col-xl-8 col-lg-9">
+  <div class="formjob">
+
+    <form action="/addform" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inputname4"><i class="fa fa-male" aria-hidden="true"></i></label>
+          <input type="text" class="form-control" name="sname" id="inputname4" placeholder="Name" value="<%= (locals.old_data) ? old_data.sname : ''; %>" required>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputsurname4"><i class="fa fa-male" aria-hidden="true"></i></label>
+          <input type="text" class="form-control" name="surname" id="inputsurname4" placeholder="Surname" value="<%= (locals.old_data) ? old_data.surname : ''; %>" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputemail4"><i class="fa fa-envelope" aria-hidden="true"></i></label>
+          <input type="email" class="form-control" name="email" id="inputemail4" placeholder="Email" value="<%= (locals.old_data) ? old_data.email : ''; %>" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-5">
+          <label for="inputphone4"><i class="fa fa-phone-square" aria-hidden="true"></i></label>
+          <input type="text" class="form-control" name="phone" id="inputphone4" placeholder="Phone" value="<%= (locals.old_data) ? old_data.phone : ''; %>" required>
+        </div>
+        <div class="form-group col-md-5">
+          <label for="inputcity4"><i class="fa fa-location-arrow" aria-hidden="true"></i></label>
+          <input type="text" class="form-control" name="city" id="inputcity4" placeholder="City" value="<%= (locals.old_data) ? old_data.city : ''; %>" required>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputage4"><i class="fa fa-gratipay" aria-hidden="true"></i></label>
+          <input type="text" class="form-control" name="age" id="inputage4" placeholder="age" value="<%= (locals.old_data) ? old_data.age : ''; %>" required>
+        </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputnodeState">Node.js</label>
+              <select id="inputnodeState" class="form-control" name="nodejs">
+                <option selected>I have no idea</option>
+                <option>0-1 year experience </option>
+                <option>1-3 year experience</option>
+                <option>3-10 year experience</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputmysqlState">Mysql</label>
+              <select id="inputmysqlState" class="form-control" name="mysqls">
+                <option selected>I have no idea</option>
+                <option>0-1 year experience</option>
+                <option>1-3 year experience</option>
+                <option>3-10 year experience</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputbtState">Bootstrap</label>
+              <select id="inputbtState" class="form-control"name="bootstrap">
+                <option selected>I have no idea</option>
+                <option>0-1 year experience</option>
+                <option>1-3 year experience</option>
+                <option>3-10 year experience</option>
+              </select>
+            </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputeduState"><i class="fa fa-graduation-cap" aria-hidden="true"></i></label>
+                  <select id="inputeduState" class="form-control" name="education">
+                    <option selected>Bachelor degree</option>
+                    <option>Master degree</option>
+                    <option>Doctorate degree</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="inputExp4"><i class="fa fa-handshake-o" aria-hidden="true"></i></label>
+                  <input type="text" class="form-control" name="experience" id="inputExp4" placeholder="Experience" value="<%= (locals.old_data) ? old_data.experience : ''; %>" required>
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="inputslr4"><i class="fa fa-money" aria-hidden="true"></i></label>
+                  <input type="text" class="form-control" name="salary" id="inputslr4" placeholder="Salary" value="<%= (locals.old_data) ? old_data.salary : ''; %>" required>
+                </div>
+                  </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1"><i class="fa fa-info" aria-hidden="true"></i></label>
+          <textarea class="form-control" name="morei" id="exampleFormControlTextarea1" rows="1" placeholder="More info.." value="<%= (locals.old_data) ? old_data.morei : ''; %>" required></textarea>
+        </div>
+
+        <input type="hidden" class="form-control" name="durum" value="Beklemede" required>
+              
+        <% if (locals.addform_error) { 
+            addform_error.forEach(function(error_msg){ %>
+            <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+          <% });
+          } %>   
+      <button type="submit" class="btn btn-outline-light">Send</button>
+    </form>
+
+  </div>
+  </div>
+</div>
+
+<%- include('footer'); %>

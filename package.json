@@ -1,0 +1,22 @@
+{
+  "name": "odevweb",
+  "version": "1.0.0",
+  "description": "Odev",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sakhavat",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-session": "^1.4.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^1.7.0"
+  }
+}

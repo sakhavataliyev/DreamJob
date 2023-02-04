@@ -1,0 +1,65 @@
+<%- include('dashead'); %>
+<style>
+    body  {
+ background-color:white!important; 
+    }
+</style>
+<!--news start-->
+
+<div class="container">
+<div class="row justify-content">
+  <div class="col-xl-12 col-lg-12" style="margin-top: 10%;">
+ 
+  <h2><%= title %></h2>
+  <div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Phone</th>
+        <th>email</th>
+        <th>city</th>
+        <th>age</th>
+        <th>nodejs</th>
+        <th>mysql</th>
+        <th>bootstrap</th>
+        <th>education</th>
+        <th>experience</th>
+        <th>more</th>
+        <th>regtime</th>
+        <th>durum</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% form.forEach(function(form){ %>
+            <tr>
+                <td><%= form.id %></td>
+                <td><%= form.sname %></td>
+                <td><%= form.surname %></td>
+                <td><%= form.phone %></td>
+                <td><%= form.email %></td>
+                <td><%= form.city %></td>
+                <td><%= form.age %></td>
+                <td><%= form.nodejs %></td>
+                <td><%= form.mysqls %></td>
+                <td><%= form.bootstrap %></td>
+                <td><%= form.education %></td>
+                <td><%= form.experience %></td>
+                <td><%= form.morei %></td>
+                <td><%= form.regtime %></td>
+                <td><%= form.durum %></td>
+
+                <td>
+                    <a href="edit/<%= form.id %>" class="btn btn-sm btn-primary">Edit</a>
+                    <a href="delete/<%= form.id %>" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<%- include('dashfooter'); %>

@@ -1,0 +1,89 @@
+<%- include('dashead'); %>
+<style>
+    body  {
+ background-color:white!important; 
+    }
+</style>
+<!--news start-->
+
+<div class="container">
+<div class="row justify-content">
+  <div class="col-xl-12 col-lg-12" style="margin-top: 10%;">
+ 
+  <h1><%= title %></h1>
+  <form action="/update" method="post">
+    <input type="hidden" value="<%= form.id %>" name="id">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter Name" value="<%= form.sname %>" name="sname" required>
+    </div>
+    <div class="form-group">
+      <label for="name">SurName:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter SurName" value="<%= form.surname %>" name="surname" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Phone:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter Phone" value="<%= form.phone %>" name="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Email:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter Email" value="<%= form.email %>" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="name">City:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter City" value="<%= form.city %>" name="city" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Age:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter Age" value="<%= form.age %>" name="age" required>
+    </div>
+    <div class="form-group">
+      <label for="name">nodejs:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter nodejs" value="<%= form.nodejs %>" name="nodejs" required>
+    </div>
+    <div class="form-group">
+      <label for="name">mysqls:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter mysqls" value="<%= form.mysqls %>" name="mysqls" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Bootstrap:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter Bootstrap" value="<%= form.bootstrap %>" name="bootstrap" required>
+    </div>
+    <div class="form-group">
+      <label for="name">education:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter education" value="<%= form.education %>" name="education" required>
+    </div>
+    <div class="form-group">
+      <label for="name">experience:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter experience" value="<%= form.experience %>" name="experience" required>
+    </div>
+    <div class="form-group">
+      <label for="name">salary:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter salary" value="<%= form.salary %>" name="salary" required>
+    </div>
+    <div class="form-group">
+      <label for="name">more:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter more" value="<%= form.morei %>" name="morei" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Time:</label>
+      <input type="text" class="form-control" id="text" placeholder="Enter regtime" value="<%= form.regtime %>" name="regtime" readonly required>
+    </div>
+    <div class="form-group">
+      <label for="inputnodeState">Durum</label>
+      <select id="inputnodeState" class="form-control" name="durum" value="<%= form.durum %>">
+        <option selected>Beklemede </option>
+        <option>Kabul Edildi!</option>
+        <option>Kabul edilmedi!</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+
+  </div>
+
+</div>
+
+<%- include('dashfooter'); %>

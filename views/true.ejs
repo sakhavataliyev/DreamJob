@@ -1,0 +1,23 @@
+<%- include('head'); %>
+
+<style>
+    body  {
+ background-image: url("https://preview.colorlib.com/theme/jobhub/assets/img/hero/h1_hero.png");
+    }
+</style>
+<!--news start-->
+
+<div class="container">
+  <div class="col-xl-12 text-center" style="margin-top: 20%; color: white;">
+    <h1>İşlem Başarıyla Gerçekleştirildi!!!</h1>
+    <p class="text-center" style="font-size: 50px;"><a style="color: white;" href="/">5 saniye sonra Ana sayfaya yönlendiriliyorsunuz!</a></p>	
+</div>
+
+
+<script>
+  var timer = setTimeout(function() {
+      window.location='/'
+  }, 5000);
+</script>
+
+<%- include('footer'); %>

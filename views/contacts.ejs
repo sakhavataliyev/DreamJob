@@ -1,0 +1,48 @@
+<%- include('head'); %>
+
+<div class="container-fluid p-5;" style="margin-top:10%; ">
+	<div class="row">
+			
+		
+		 <div class="col-sm-6 py-3 offset-sm-1">
+		 
+			<div id="loginbox" style="width: 80%;padding: 5%;border-radius: 30%;background-color: #ffd525;margin: 4%;">
+				<div class="form-group">
+          <div align="center">
+				 <h1 style="font-family: cursive;">Contact</h1>
+        </div>
+				   <form action="/addcontact" method="POST">
+					 <label for="usr" style="font-family: cursive;" >Form:</label>
+					 <input style="margin-bottom:3%;font-family: cursive;" type="text" name="mname" id="_rname" class="form-control" placeholder="Name" value="<%= (locals.old_data) ? old_data.mname : ''; %>" required>
+                     <input  style="margin-bottom:3%;font-family: cursive;" type="email" name="email" id="_remail" class="form-control" placeholder="Email" value="<%= (locals.old_data) ? old_data.email : ''; %>" required>	
+                     <input style="margin-bottom:3%;font-family: cursive;" type="text" name="phone" id="_rsurname" class="form-control" placeholder="Surname" value="<%= (locals.old_data) ? old_data.phone : ''; %>" required>
+                     <input style="margin-bottom:3%;font-family: cursive;" type="text" name="message" id="_rcity" class="form-control" placeholder="City" value="<%= (locals.old_data) ? old_data.message : ''; %>" required>
+           							<% if (locals.addform_error) { 
+										  addform_error.forEach(function(error_msg){ %>
+										  <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+										<% });
+										} %>            
+					 <div class="form-group">
+					   <button type="submit" class="btn btn-block" style="color: #201b05;background-color: #ffffff;border-color: #f8fcff;border-radius: 25%;padding: 2%;box-shadow: 10px 10px 5px #757474;margin-bottom: 10%;">Sign Up</button>
+					 </div>
+					 
+				  </form>
+				</div>
+			</div>
+		 
+		 
+		 </div>
+</div>
+
+
+
+
+<hr>
+<footer class="container text-center">
+      <p>© All rights are reserved by Sakhavat Aliyev</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

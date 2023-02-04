@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Homework | Sakhavat Aliyev</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+
+    <style>
+
+    body {
+        font-family: cursive;
+      }
+
+    .form-control {
+
+        color: #ffffff;
+        background-color: #ffd525;
+        border: 1px solid #7d7d7d;
+        border-radius: 20%;
+      }
+    </style>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm" style="background-color: #ffd525;">
+
+  <ul class="nav navbar-nav mx-md-auto justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="/" style="font-weight: 700; font-size: 140%; font-family: cursive; color:#000;">Home</a>
+    </li>
+	<li class="nav-item">
+      <a class="nav-link active" href="/logout" style="font-weight: 700; font-size: 140%; font-family: cursive; color:#000;">Logout</a>
+    </li>
+  </ul>
+  </nav>
+
+<div class="container justify-content-center">
+  <h1 class="text-center">Hoş geldin, <%= name %>  </h1>
+  
+  <div class="row text-center">
+  <div class="col-6 col-md-2"> </div>
+  <div class="col-12 col-md-8">
+
+  <img src="https://avatars0.githubusercontent.com/u/13109017?s=460&u=79e667af914f55f1ec3e81222a31267c18661cb2&v=4" class="mx-auto d-block" alt="Sakhavat Aliyev" style="border:5px solid #ffd525; border-radius:150px !important" width="250" height="250">
+   <button type="button" class="btn center-block" style="background-color: #ffd525; !important; color:#fff; border-radius:50px;padding:5px; margin-top:20px; margin-bottom:20px;">Online</button>
+
+
+       <h4 class="text-center">About myself</h4>
+  <p><%= about %></p>
+
+
+    <div class="row">
+
+  <div class="row table-responsive">
+
+ <table class="table table-borderless">
+
+  <tbody>
+    <tr>
+      <td class="text-right" style="font-weight:700;" >Name :</td>
+      <td class="text-left"><%= name %></td>
+    </tr>
+    <tr>
+
+      <td class="text-right" style="font-weight:700;" >Surname :</td>
+      <td class="text-left"><%= surname %></td>
+    </tr>
+	    <tr>
+
+    <td class="text-right" style="font-weight:700;" >Email :</td>
+    <td class="text-left"><%= email %></td>
+   </tr>
+       <tr>
+
+
+      <td class="text-right" style="font-weight:700;" >Registration :</td>
+      <td class="text-left"><%= regtime %></td>
+    </tr>
+	    <tr>
+
+
+      <td class="text-right" style="font-weight:700;" >Last Activity :</td>
+      <td class="text-left">11 December 2020 01:35</td>
+    </tr>
+	    <tr>
+
+      <td class="text-right" style="font-weight:700;" >Group :</td>
+      <td class="text-left" style="font-weight:700;color:red;">Administrators</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+
+   </div>
+
+ 
+
+
+
+   <div class="container-fluid;" style="margin-top:10%; ">
+ <div align="center">
+
+     <div id="loginbox" style="width: 80%;padding: 5%;border-radius: 30%;background-color: #ffd525;margin: 4%;">
+ 		<div class="form-group">
+ 		<h1  style="font-family: cursive;">Add message</h1>
+ 		  <form action="/posttext" method="get">
+ 				<label for="usr" style="font-family: cursive;" >New message:</label>
+           <input type="hidden" class="form-control" placeholder="name" name="user_name" value="<%= name %>" required="required">
+ 				<input style="font-family: cursive;" type="text" class="form-control" name="mesaj" placeholder="message" required></input><br>
+ 				 <div class="form-group">
+ 				  <button type="submit" class="btn btn-block" style="color: #201b05;background-color: #ffffff;border-color: #f8fcff;border-radius: 25%;padding: 2%;box-shadow: 10px 10px 5px #757474;margin-bottom: 10%;">Add Message</button>
+ 				</div>
+ 		 </form>
+ 		</div>
+ 		</div>
+
+
+
+   <div class="row" style="max-width: 800px;border-radius: 20%;background-color: #ffd525;">
+       <div class="col-12" style="box-shadow: 10px 10px 5px #aaaaaa;border-radius: 20%;">
+     <h1 style="font-family: cursive; padding: 5%;">Users messages</h1>
+       <div id="result1" style="max-width: 630px;">
+     </div>
+   </div>
+   </div>
+
+
+
+
+
+
+
+  </div>
+  <div class="col-6 col-md-2"> </div>
+</div>
+
+<hr>
+<footer class="container text-center">
+      <p>© All rights are reserved by Sakhavat Aliyev</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

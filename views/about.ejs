@@ -1,0 +1,30 @@
+<%- include('head'); %>
+
+<!--news start-->
+
+<div class="container">
+    <div class="row justify-content">
+      <div class="col-xl-4 col-lg-3">
+      <div class="findjob">
+        <h1>
+            <% see.forEach(function (about) { %>
+                <%= about.aboutname %>                              
+            <% }) %>
+        </h1>
+      </div>
+      </div>
+      <div class="col-xl-8 col-lg-9">
+      <div class="formjob">
+    
+ 
+        <% see.forEach(function (about) { %> 
+            <%= about.aboutus %>   
+         <% }) %>
+    
+    
+      </div>
+      </div>
+    </div>
+
+    
+<%- include('footer'); %>

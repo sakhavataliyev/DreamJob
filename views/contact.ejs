@@ -1,0 +1,69 @@
+<%- include('head'); %>
+<style>
+    body  {
+ background-image: url("https://preview.colorlib.com/theme/jobhub/assets/img/hero/h1_hero.png");
+    }
+</style>
+<!--news start-->
+<div class="container">
+    <div class="row justify-content">
+      <div class="col-xl-4 col-lg-3">
+      <div class="findjob">
+      <h1>Find your dream job.</h1>
+      <p>Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
+      </div>
+      </div>
+      <div class="col-xl-8 col-lg-9">
+      <div class="formjob">
+    
+        <form action="/addcontact" method="POST">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputname4"><i class="fa fa-male" aria-hidden="true"></i></label>
+              <input type="text" class="form-control" name="mname" id="inputname4" placeholder="Name" value="<%= (locals.old_data) ? old_data.mname : ''; %>" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputsurname4"><i class="fa fa-male" aria-hidden="true"></i></label>
+              <input type="text" class="form-control" name="surname" id="inputsurname4" placeholder="Surname" value="<%= (locals.old_data) ? old_data.surname : ''; %>" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputphone4"><i class="fa fa-phone-square" aria-hidden="true"></i></label>
+              <input type="text" class="form-control" name="phone" id="inputphone4" placeholder="Phone" value="<%= (locals.old_data) ? old_data.phone : ''; %>" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputemail4"><i class="fa fa-location-arrow" aria-hidden="true"></i></label>
+              <input type="email" class="form-control" name="email" id="inputemail4" placeholder="email" value="<%= (locals.old_data) ? old_data.email : ''; %>" required>
+            </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="inputnodeState"><i class="fa fa-header" aria-hidden="true"></i></label>
+                  <select id="inputnodeState" class="form-control" name="subject">
+                    <option selected>Advertising </option>
+                    <option>Complaint</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                  </div>
+    
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1"><i class="fa fa-commenting-o" aria-hidden="true"></i></label>
+              <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="1" placeholder="Message" value="<%= (locals.old_data) ? old_data.message : ''; %>" required></textarea>
+            </div>
+
+            <% if (locals.addform_error) { 
+                addform_error.forEach(function(error_msg){ %>
+                <div class="alert alert-danger" role="alert"><%= error_msg %></div>
+              <% });
+              } %>    
+
+          <button type="submit" class="btn btn-outline-light">Send</button>
+        </form>
+    
+      </div>
+      </div>
+    </div>
+    
+    <%- include('footer'); %>
